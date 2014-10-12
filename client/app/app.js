@@ -9,12 +9,18 @@ angular.module('sundayone', [
         url: '/home',
         controller: 'HomeController',
         templateUrl: 'home/home.html'
+      })
+      .state('home.subviews', {
+        views: {
+          'erro': {
+            template: '<h1> erro!!! </h1>'
+          },
+          'cookies': {
+            template: '<h2> cookies!!! </h2>'
+          }
+        }
       });
-  $stateProvider
-      .state('home.sidebar', {
-        url: '/sidebar',
-        template: '<h1> erro!!! </h1>'
-      });
+
   
-  $urlRouterProvider.otherwise('/home/sidebar');
+  $urlRouterProvider.otherwise('/home');
 });
