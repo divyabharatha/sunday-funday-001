@@ -5,11 +5,16 @@ angular.module('sundayone', [
 ])
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
-      .state('index', {
-        url: '/',
+      .state('home', {
+        url: '/home',
         controller: 'HomeController',
         templateUrl: 'home/home.html'
       });
+  $stateProvider
+      .state('home.sidebar', {
+        url: '/sidebar',
+        template: '<h1> erro!!! </h1>'
+      });
   
-  $urlRouterProvider.otherwise('/');
+  $urlRouterProvider.otherwise('/home/sidebar');
 });
