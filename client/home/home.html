@@ -1,5 +1,17 @@
 {{ user }}
 
+<div>
+  <form ng-submit='addTodos()'>
+    <input ng-model='todo.name' placeholder="What do you want to do?">
+    <input ng-model='todo.due' placeholder="When do you want it done by?">
+    <input ng-model='todo.category' placeholder="Organize by.. ?">
+    <button>Add Me</button>
+  </form>
+</div>
+
 <div ui-view> </div>
 <div ui-view='erro'> </div>
 <div ui-view='cookies'> </div>
+
+{{ todo }}
+{{ todos }}
